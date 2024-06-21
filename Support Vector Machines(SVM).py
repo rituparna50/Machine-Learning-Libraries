@@ -44,3 +44,10 @@ y_pred = svm_clf.predict(X_test)
 #Calculate accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Support Vector machines accuracy: {accuracy}")
+
+## Accuracy = (Nunber of Correct Predictions) / (Total number of Predictions)
+
+# Save accuracy to the accuracies.md file 
+with open("/Users/stanford/Desktop/FDL Prep/Accuracies.md", "a") as f:
+    f.write("# Support Vector Machines (SVM)\n")
+    f.write(f"Accuracy: {accuracy}\n\n")

@@ -12,6 +12,7 @@ import matplotlib.pyplot as plt
 
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score
 
 # Generate synthetic data 
 np.random.seed(42)
@@ -28,6 +29,9 @@ lin_reg.fit(x_train, y_train)
 #make predictions on the test set 
 y_pred = lin_reg.predict(x_test)
 
+#Calculate the R-squared score 
+r2 = r2_score(y_test, y_pred)
+
 #Plot the results 
 plt.scatter(x_test, y_test, color='black', label='Actual data')
 plt.plot(x_test, y_pred, color='blue', linewidth=3, label='Linear Regression model')
@@ -35,5 +39,13 @@ plt.xlabel('x')
 plt.ylabel('y')
 plt.legend()
 plt.title('Linear Regression Example')
-plt.savefig('linear_regression_plot.png')
+
+
+plt.savefig('/Users/stanford/Desktop/FDL Prep/Plots/linear_regression_plot.png')
+
 plt.show()
+
+# Save R-squared score to the accuracies.md file
+with open("/Users/stanford/Desktop/FDL Prep/Accuracies.md", "a") as f:
+    f.write("# Linear Regression\n")
+    f.write(f"R-squared Score: {r2}\n\n")
