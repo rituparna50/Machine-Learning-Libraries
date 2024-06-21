@@ -3,6 +3,9 @@
     Fundamental supervised learning algorithm used for predicting a continuous outcome. Establishes a linear relationship between the input features and the target variable. 
 '''
 
+# Linear regression is a fundamental supervised learning algorithm used for predicting a continuous outcome. 
+#It establishes a linear relationship between the input features and the target variable.
+
 # import libraries 
 import numpy as np
 import matplotlib.pyplot as plt 
