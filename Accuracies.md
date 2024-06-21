@@ -8,3 +8,6 @@ Accuracy: 1.0
 # Support Vector Machines (SVM)
 Accuracy: 1.0
 
+# Support Vector Machines (SVM)
+Accuracy: 1.0
+
